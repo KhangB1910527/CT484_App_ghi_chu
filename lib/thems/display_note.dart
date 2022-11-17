@@ -16,7 +16,7 @@ class _ShowNoteState extends State<ShowNote> {
         ModalRoute.of(context).settings.arguments as NoteModel;
     return Scaffold(
       appBar: AppBar(
-        title: Text("Your Note"),
+        title: Text("Ghi chú"),
 
         //delete
 

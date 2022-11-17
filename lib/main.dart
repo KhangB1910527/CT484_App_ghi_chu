@@ -46,7 +46,9 @@ class _HomeScreenState extends State<HomeScreen> {
         backgroundColor: AppStyle.mainColor,
       ),
       body: FutureBuilder(
+        
         future: getNotes(),
+        
         builder: (context, AsyncSnapshot noteData) {
           switch (noteData.connectionState) {
             case ConnectionState.waiting:
@@ -60,6 +62,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     child: Text("you don't have any notes yet"),
                   );
                 } else {
+                  
                   return Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: ListView.builder(
@@ -72,6 +75,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         int id = noteData.data[index]["id"];
 
                         return Card(
+                          
                           child: ListTile(
                             onTap: () {
                               Navigator.pushNamed(context, "/ShowNote",
